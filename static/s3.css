@@ -1,0 +1,402 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+.navbar {
+    background-color: rgb(255, 217, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    color: white;
+    border-radius: 3px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgb(32, 41, 218);
+    box-shadow: 0 0 15 white;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    color: black;
+}
+
+.navbar a.active {
+    background-color: rgb(255, 55, 0);
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+    color: black;
+}
+.line{
+    height: 3px;
+    width: inherit;
+
+    background-color: black;
+    box-shadow: 0px 5px 10px rgb(255, 255, 255);
+}
+
+
+
+ 
+ 
+
+
+#site_name{
+    position: absolute;
+    left: 24px;
+    top: 79px;
+    background-color: #000000;
+    
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 190px;
+    width: 200px;
+    background-image: url("data:image/jpeg;base64,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");
+       
+}
+.find{
+
+    height: 450px;
+    width: 542px;
+    position: fixed;
+    top: 120px;
+    left: 263px;
+}
+
+
+.find label{
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    left: 260px;
+    /* top: 250px; */
+}
+/* .find input{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    position: fixed;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    left: 461px;
+}
+.find input:hover{
+    box-shadow: 0px 5px 10px rgb(187, 218, 32);
+}
+.find input:focus{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0px 0px 15px rgb(172, 218, 32);
+    position: fixed;
+    left: 461px;
+} */
+/* .find button{ */
+    /* position: fixed;
+    
+    height: 30px;
+    background-color:rgb(209, 218, 32) ;
+    border-radius: 5px;
+border: 2px solid black;
+    left: 474px;
+    top: 346px;
+} */
+/* .find button:hover{
+    box-shadow: 0px 0px 5px black;
+}
+.find button:active{
+    background-color: black;
+    color: rgb(187, 218, 32);
+} */
+.product{
+    background-color: black;
+    height: 398px;
+    width: 355px;
+    position: fixed;
+    top: 73px;
+    right: 9px;
+}
+.product img{
+    position: absolute;
+    top: 22px;
+    left: 120px;
+    height: 150px;
+    width: 120px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgb(209, 218, 32);
+    border: 2px solid rgb(255, 234, 0);
+
+}
+.product label{
+    position: relative;
+    top: 200px;
+    left: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    color: #AF2655;
+    background: linear-gradient( 
+        to right, #28f321, #ff6b08, 
+         #cf23cf, #eedd44); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+}
+#last{
+    font-size: 20px;
+    color: #28f321;
+    background: linear-gradient( 
+        to right, #dbf321, rgb(8, 222, 255), 
+         #2326cf, #ee44e3); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+}
+
+.nicknames{
+    position: relative;
+    top: 113px;
+    left: 24px;
+    height: 34px;
+    width: 200px;
+    box-shadow: 0px 5px 10px rgb(204, 255, 0);
+    background-color: black;
+    border: 2px solid white;
+   text-align: center;
+    align-content: center;
+    border-radius: 15px 50px 30px 5px
+
+
+}
+.nicknames a{
+    position: relative;
+    top: 10px;
+   
+    height: 34px;
+    width: 200px;
+    background-color: black;
+color: #dbf321;
+    text-align: center;
+    align-self  : center;
+
+
+}
+button {
+    position: relative;
+    padding: 12px 35px;
+    background: rgb(209, 218, 32);
+    font-size: 17px;
+    font-weight: 500;
+    color: #181818;
+    border: 3px solid white;
+    border-radius: 8px;
+    box-shadow: 0 0 0 rgb(209, 218, 32);
+    transition: all .3s ease-in-out;
+  }
+  
+  .star-1 {
+    position: absolute;
+    top: 20%;
+    opacity: 0;
+    left: 20%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(209, 218, 32));
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  }
+  
+  .star-2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    opacity: 0;
+    filter: drop-shadow(0 0 0 rgb(209, 218, 32));
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 5px;
+    height: auto;
+    opacity: 0;
+    filter: drop-shadow(0 0 0 rgb(209, 218, 32));
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-4 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 8px;
+    height: auto;
+    opacity: 0;
+    filter: drop-shadow(0 0 0 rgb(209, 218, 32));
+    z-index: -5;
+    transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    opacity: 0;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(209, 218, 32));
+    z-index: -5;
+    transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    opacity: 0;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(209, 218, 32));
+    z-index: -5;
+    transition: all .8s ease;
+  }
+  
+  button:hover {
+    background: transparent;
+    color: rgb(209, 218, 32);
+    box-shadow: 0 0 25px rgb(209, 218, 32);
+  }
+  
+  button:hover .star-1 {
+    position: absolute;
+    top: -80%;
+    left: -30%;
+    opacity: 1;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-2 {
+    position: absolute;
+    top: -25%;
+    left: 10%;
+    width: 15px;
+    opacity: 1;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-3 {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 5px;
+    opacity: 1;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-4 {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    opacity: 1;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 115%;
+    width: 15px;
+    opacity: 1;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    opacity:1;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .fil0 {
+    fill: #FFFDEF
+  }
+  .box-input {
+    position: relative;
+  }
+  
+  .main {
+    position: relative;
+    max-height: 200px;
+  }
+  
+  .input {
+    max-width: 190px;
+    border: none;
+    border-bottom: solid gray 1px;
+    background: transparent;
+    outline: none;
+    padding: 10px;
+    position: relative;
+    left: 210px;
+    transition: 0.2s;
+    color: #e8e8e8;
+    font-size: 17px;
+  }
+  
+  .input:focus , .input:valid {
+    border-color: rgb(242, 255, 0);
+  }
+  
+  label span {
+    position: absolute;
+    top: 0px;
+    display: block;
+    transition: 0.2s;
+    pointer-events: none;
+    font-size: 25px;
+    color: gray;
+    opacity: 0%;
+  }
+  
+  .input:focus + label span ,.input:valid + label span {
+    color: rgb(255, 255, 0);
+    top: -25px;
+  
+        opacity: 100%;
+  }
+  
+  .input:focus + label p ,.input:valid + label p {
+    opacity: 0;
+    position: relative;
+   }

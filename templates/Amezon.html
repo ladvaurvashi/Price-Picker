@@ -1,0 +1,258 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amezon</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/s2.css') }}">
+</head>
+<link rel="icon" type="image/x-icon" href="https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png">
+<body>
+    <main>
+   
+    <div class="navbar" id="myNavbar">
+        <a href="{{url_for('index')}}"  onclick="setActive(this)">Home</a>
+        <a href="{{url_for('amezon')}}"class="active" onclick="setActive(this)">Amazon</a>
+        <a href="{{url_for('flipkart')}}" onclick="setActive(this)">Flipkart</a>
+        <a href='{{url_for("cu")}}' onclick="setActive(this)">Connect us</a>
+       
+    
+    
+    </div>
+    
+    <div class="line"></div>
+    <br>
+    <div id="site_name"></div>
+    {% for i in nicknames: %}
+    <div class="nicknames">
+        <a>{{nicknames[i]}}</a>
+    </div>
+    {% endfor %}
+    <script>
+        function setActive(element) {
+            // Remove "active" class from all links
+            var links = document.querySelectorAll('.navbar a');
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+    
+            // Add "active" class to the clicked link
+            element.classList.add('active');
+        }
+    </script>
+   <div class="container">
+    <div class="site_name">
+        
+    </div>
+   </div>
+        <form action="/Amezon" method="post">
+            <div class="find">
+                <label for="url"  >Enter URL :</label>
+                <input type="text" name="url" id="url" class="card ">
+                <div class="main">
+                  <input required="" type="text" class="input" name="url">
+                  <label>
+                  <span style="transition-delay:0ms;left:210px">U</span>
+                  <span style="transition-delay:75ms;left:232px">r</span>
+                  <span style="transition-delay:150ms;left:246px">l</span>
+
+                  <!-- <span style="transition-delay:225ms;left:265px">t</span> -->
+                 
+                  <!-- <p style="position:absolute;left:210px;top:-10px;font-size:20px;margin:10px;color:gray;transition:0.5s;pointer-events:none;width: auto;">Url</p>
+                  </label>
+                  </div>
+                <br><br><br><br>
+
+                <label for="Wanted_price"  >Enter Wanted price :</label>
+                <!-- <input type="text" name="Wanted_price" id="Wanted_price"> -->
+                <!-- <div class="main">
+                  <input required="" type="text" class="input" name="Wanted_price">
+                  <label>
+                  <span style="transition-delay:0ms;left:210px">W</span>
+                  <span style="transition-delay:75ms;left:232px">a</span>
+                  <span style="transition-delay:150ms;left:246px">n</span>
+                  <span style="transition-delay:225ms;left:261px">t</span>
+                  <span style="transition-delay:300ms;left:268px">e</span>
+                  <span style="transition-delay:375ms;left:282px">d</span>
+                  <span style="transition-delay:450ms;left:295px"> </span>
+                  <span style="transition-delay:525ms;left:305px">P</span>
+                  <span style="transition-delay:600ms;left:321px">r</span>
+                  <span style="transition-delay:675ms;left:331px">i</span>
+                  <span style="transition-delay:750ms;left:337px">c</span>
+                  <span style="transition-delay:825ms;left:350px">e</span> -->
+                  <!-- <span style="transition-delay:225ms;left:265px">t</span> -->
+                 
+                  <!-- <p style="position:absolute;left:210px;top:-10px;font-size:20px;margin:10px;color:gray;transition:0.5s;pointer-events:none;width: auto;">price</p>
+                  </label>
+                  </div>
+                <br><br><br><br>
+                <label for="Name_of_product"  >Enter Name :</label>
+                <!-- <input type="text" name="name" id="name"> -->
+                <!-- <div class="main">
+                  <input required="" type="text" class="input" name="name">
+                  <label>
+                  <span style="transition-delay:0ms;left:210px">N</span>
+                  <span style="transition-delay:75ms;left:228px">a</span>
+                  <span style="transition-delay:150ms;left:243px">m</span>
+                  <span style="transition-delay:225ms;left:265px">e</span> --> -->
+                 
+                  <!-- <p style="position:absolute;left:210px;top:-10px;font-size:24px;margin:10px;color:gray;transition:0.5s;pointer-events:none;">Name</p>
+                  </label>
+                  </div>
+                <!-- <button type="submit">Find Item</button> -->
+                <!-- <br><br>
+                <br><br>
+                <br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit">Find Item
+                    <div class="star-1"> -->
+                      <!-- <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+                    </div>
+                    <div class="star-2">
+                      <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+                    </div>
+                    <div class="star-3">
+                      <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+                    </div>
+                    <div class="star-4">
+                      <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+                    </div>
+                    <div class="star-5">
+                      <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+                    </div>
+                    <div class="star-6">
+                      <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+                    </div>
+                  </button> -->
+        <!-- </form>
+   
+    </div>
+    <form action="" method="post">
+        <div class="product">
+        <!-- <img src={{photo}} alt="" id="product_img"> -->
+        <!-- <lable ></lable>
+        <br>
+
+        <label for="" >Product Name :- {{name}}</label>
+        <br>
+        <label for="" >Product Price &nbsp; :- {{price_p}}</label><br>
+        <label for="" >Your Price &nbsp; :- {{price_w}}</label><br>
+        <!-- <label for="" id="last">{{text}}</label> -->
+       <!-- <br>
+        <!-- <center><button type="submit"></button></center> -->
+    <!-- </div></form>
+</main>
+<script src="script.js"></script>
+</body>
+</html>  --> --> --> --> --> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meesho</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/s2.css') }}">
+</head>
+<link rel="icon" type="image/x-icon" href="https://example.com/meesho-icon.png"> <!-- Replace with the Meesho icon URL -->
+<body>
+    <main>
+   
+    <div class="navbar" id="myNavbar">
+        <a href="{{ url_for('index') }}" onclick="setActive(this)">Home</a>
+        <a href="{{ url_for('meesho') }}" class="active" onclick="setActive(this)">Meesho</a>
+        <a href="{{ url_for('flipkart') }}" onclick="setActive(this)">Flipkart</a>
+        <a href='{{ url_for("cu") }}' onclick="setActive(this)">Connect us</a>
+    </div>
+    
+    <div class="line"></div>
+    <br>
+    <div id="site_name"></div>
+    {% for i in nicknames: %}
+    <div class="nicknames">
+        <a>{{ nicknames[i] }}</a>
+    </div>
+    {% endfor %}
+    <script>
+        function setActive(element) {
+            // Remove "active" class from all links
+            var links = document.querySelectorAll('.navbar a');
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+    
+            // Add "active" class to the clicked link
+            element.classList.add('active');
+        }
+    </script>
+    <div class="container">
+        <div class="site_name"></div>
+    </div>
+        <form action="/Meesho" method="post">
+            <div class="find">
+                <label for="url">Enter URL :</label>
+                <!-- <input type="text" name="url" id="url" class="card "> -->
+                <div class="main">
+                  <input required="" type="text" class="input" name="url">
+                  <label>
+                  <span style="transition-delay:0ms;left:210px">U</span>
+                  <span style="transition-delay:75ms;left:232px">r</span>
+                  <span style="transition-delay:150ms;left:246px">l</span>
+                  <p style="position:absolute;left:210px;top:-10px;font-size:20px;margin:10px;color:gray;transition:0.5s;pointer-events:none;width: auto;">Url</p>
+                  </label>
+                </div>
+                <br><br><br><br>
+
+                <label for="Wanted_price">Enter Wanted price :</label>
+                <div class="main">
+                  <input required="" type="text" class="input" name="Wanted_price">
+                  <label>
+                  <span style="transition-delay:0ms;left:210px">W</span>
+                  <span style="transition-delay:75ms;left:232px">a</span>
+                  <span style="transition-delay:150ms;left:246px">n</span>
+                  <span style="transition-delay:225ms;left:261px">t</span>
+                  <span style="transition-delay:300ms;left:268px">e</span>
+                  <span style="transition-delay:375ms;left:282px">d</span>
+                  <span style="transition-delay:450ms;left:295px"> </span>
+                  <span style="transition-delay:525ms;left:305px">P</span>
+                  <span style="transition-delay:600ms;left:321px">r</span>
+                  <span style="transition-delay:675ms;left:331px">i</span>
+                  <span style="transition-delay:750ms;left:337px">c</span>
+                  <span style="transition-delay:825ms;left:350px">e</span>
+                  <p style="position:absolute;left:210px;top:-10px;font-size:20px;margin:10px;color:gray;transition:0.5s;pointer-events:none;width: auto;">price</p>
+                  </label>
+                </div>
+                <br><br><br><br>
+                <label for="Name_of_product">Enter Name :</label>
+                <div class="main">
+                  <input required="" type="text" class="input" name="name">
+                  <label>
+                  <span style="transition-delay:0ms;left:210px">N</span>
+                  <span style="transition-delay:75ms;left:228px">a</span>
+                  <span style="transition-delay:150ms;left:243px">m</span>
+                  <span style="transition-delay:225ms;left:265px">e</span>
+                  <p style="position:absolute;left:210px;top:-10px;font-size:24px;margin:10px;color:gray;transition:0.5s;pointer-events:none;">Name</p>
+                  </label>
+                </div>
+                <br><br>
+                <br><br>
+                <br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit">Find Item
+                    <!-- Include Meesho-specific star icons or any relevant icons for ratings -->
+                    <div class="star-1">
+                      <!-- Meesho star icon 1 -->
+                    </div>
+                    <div class="star-2">
+                      <!-- Meesho star icon 2 -->
+                    </div>
+                    <div class="star-3">
+                      <!-- Meesho star icon 3 -->
+                    </div>
+                    <div class="star-4">
+                      <!-- Meesho star icon 4 -->
+                    </div>
+                    <div class="star-5">
+                      <!-- Meesho star icon 5 -->
+                    </div>
+                    <div class

@@ -1,0 +1,445 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000000;
+}
+
+.navbar {
+  background-color: #26a4af;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  color: white;
+  border-radius: 3px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgb(181, 32, 218);
+  box-shadow: 0 0 15 white;
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px rgb(0, 0, 0);
+  color: black;
+}
+
+.navbar a.active {
+  background-color: rgb(255, 221, 0);
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px rgb(0, 0, 0);
+  color: black;
+}
+.line{
+  height: 3px;
+  width: inherit;
+  background-color: black;
+  box-shadow: 0px 5px 10px rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+#site_name{
+  position: fixed;
+  left: 24px;
+  top: 79px;
+  background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+  height: 190px;
+  width: 200px;
+     
+}
+
+
+.find{
+
+  height: 450px;
+  width: 542px;
+  position: fixed;
+  top: 120px;
+  left: 263px;
+}
+
+
+.find label{
+  color: white;
+  font-size: 20px;
+  position: fixed;
+  left: 260px;
+  
+}
+.product{
+  background-color: black;
+  height: 398px;
+  opacity: 1;
+  width: 355px;
+  position: fixed;
+  top: 73px;
+  z-index: -1;
+  right: -12px;
+}
+.product img{
+  position: absolute;
+  top: 22px;
+  left: 120px;
+  height: 150px;
+  width: 120px;
+  border-radius: 5px;
+  border: 2px solid rgb(0, 255, 251);
+box-shadow: 0px 0px 15px rgb(0, 255, 251);
+}
+.product label{
+  position: relative;
+  top: 200px;
+  left: 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  color: #AF2655;
+  background: linear-gradient( 
+      to right, #28f321, #ff6b08, 
+       #cf23cf, #eedd44); 
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text; 
+}
+#last{
+  font-size: 20px;
+  color: #28f321;
+  background: linear-gradient( 
+      to right, #dbf321, rgb(8, 222, 255), 
+       #2326cf, #ee44e3); 
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text; 
+}
+
+.nicknames{
+  position: relative;
+  top: 113px;
+  left: 24px;
+  height: 34px;
+  width: 200px;
+  background-color: wheat;
+  border: 2px solid black;
+ text-align: center;
+  align-content: center;
+
+
+}
+.nicknames a{
+  position: relative;
+  top: 10px;
+ 
+  height: 34px;
+  width: 200px;
+  background-color: wheat;
+  
+  text-align: center;
+  align-self  : center;
+
+
+}
+#url{
+  /* background: linear-gradient(to bottom,#dd00ff, #000000 , #00ff08); */
+  
+  /* border: 1px solid wheat; */
+  color: white;
+  
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  /* width: 300px;  */
+ /* width: 300px;
+ padding: 10px;
+
+ border-radius: 5px;
+ outline: none; */
+ transition: box-shadow 0.3s ease;
+ border: 2px solid #3498db;
+}
+#url:hover{
+ /* animation-name: rotatetor;
+ animation-duration: 1s;
+ animation-fill-mode: forwards;
+ animation-iteration-count: infinite;
+ animation-timing-function: ease; */
+
+ box-shadow: 0 0 20px rgba(52, 208, 219, 0.8);
+}
+
+
+
+#Wanted_price{
+  /* background: linear-gradient(to bottom,#dd00ff, #000000 , #00ff08); */
+     
+  border: 1px solid wheat;
+  /* border: none; */
+  color: white;
+  border: 2px solid #3498db;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  /* width: 300px;  */
+}
+#Wanted_price:hover{
+  box-shadow: 0 0 20px rgba(52, 208, 219, 0.8);
+}
+
+#name{
+  /* background: linear-gradient(to bottom,#dd00ff, #000000 , #00ff08); */
+  /* border: none; */
+      
+  border: 1px solid wheat;
+  color: white;
+  
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  outline: none;
+  /* width: 300px;  */
+}
+#name:hover{
+  /* box-shadow: 0px 5px 10px cyan ;
+   */
+   box-shadow: 0 0 20px rgba(52, 208, 219, 0.8);
+  }
+
+.card {
+  --flow-space: 0.5em;
+  --hsl: var(--hue), var(--saturation), var(--lightness);
+  flex: 1 1 14rem;
+  padding: 1.5em 2em;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  align-items: start;
+  gap: 1.25em;
+  color: #eceff1;
+  background-color: #2b2b2b;
+  border: 1px solid #eceff133;
+  border-radius: 15px;
+}
+button {
+  position: relative;
+  top: -85px;
+  padding: 12px 35px;
+  background: rgba(52, 208, 219, 0.8);
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 3px solid white;
+  border-radius: 8px;
+  box-shadow: 0 0 0 rgba(52, 208, 219, 0.8);
+  transition: all .3s ease-in-out;
+}
+
+.star-1 {
+  position: absolute;
+  top: 20%;
+  opacity: 0;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 rgba(52, 208, 219, 0.8));
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  opacity: 0;
+  filter: drop-shadow(0 0 0 rgba(52, 208, 219, 0.8));
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  opacity: 0;
+  filter: drop-shadow(0 0 0 rgba(52, 208, 219, 0.8));
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  opacity: 0;
+  filter: drop-shadow(0 0 0 rgba(52, 208, 219, 0.8));
+  z-index: -5;
+  transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  opacity: 0;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 rgba(52, 208, 219, 0.8));
+  z-index: -5;
+  transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  opacity: 0;
+  height: auto;
+  filter: drop-shadow(0 0 0 rgba(52, 208, 219, 0.8));
+  z-index: -5;
+  transition: all .8s ease;
+}
+
+button:hover {
+  background: transparent;
+  color: rgba(52, 208, 219, 0.8);
+  box-shadow: 0 0 25px rgba(52, 208, 219, 0.8);
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  opacity: 1;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  opacity: 1;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  opacity: 1;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  opacity: 1;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  opacity: 1;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  opacity:1;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #FFFDEF
+}
+
+
+.box-input {
+  position: relative;
+}
+
+.main {
+  position: relative;
+  max-height: 200px;
+}
+
+.input {
+  max-width: 190px;
+  border: none;
+  border-bottom: solid gray 1px;
+  background: transparent;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  left: 210px;
+  transition: 0.2s;
+  color: #e8e8e8;
+  font-size: 17px;
+}
+
+.input:focus , .input:valid {
+  border-color: rgb(0, 191, 255);
+}
+
+label span {
+  position: absolute;
+  top: 0px;
+  display: block;
+  transition: 0.2s;
+  pointer-events: none;
+  font-size: 25px;
+  color: gray;
+  opacity: 0%;
+}
+
+.input:focus + label span ,.input:valid + label span {
+  color: rgb(0, 191, 255);
+  top: -25px;
+
+      opacity: 100%;
+}
+
+.input:focus + label p ,.input:valid + label p {
+  opacity: 0;
+  position: relative;
+ 
+}
